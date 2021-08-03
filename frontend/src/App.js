@@ -4,6 +4,8 @@ import './App.css';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
+import ListPage from './pages/ListPage'
+import TaskPage from './pages/TaskPage'
 import { getLoggedInUser, login } from './api/UserAPI';
 
 function App() {
@@ -75,6 +77,8 @@ function App() {
           <Route exact path="/" render={renderHomePage} />
           <Route exact path="/login" render={renderLoginPage} />
           <Route exact path="/signup" component={SignupPage} />
+          <Route exact path="/list" component={ListPage} />
+          <Route exact path="/list/:listID/:taskID" component={TaskPage} />
         </div>
       </Router>
     </div>
